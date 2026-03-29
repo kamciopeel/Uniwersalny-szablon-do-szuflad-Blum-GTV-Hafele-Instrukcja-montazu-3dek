@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrukcja Szablonu 3dek.pl</title>
+    <style>
+        :root { --primary: #e85d1c; --dark: #292929; --light: #f9f9f9; --border: #eee; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background: var(--dark); color: #333; line-height: 1.5; }
+        .container { max-width: 900px; margin: 20px auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        header { background: var(--primary); color: white; padding: 25px 15px; text-align: center; border-bottom: 5px solid var(--dark); }
+        header h1 { margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 2px; }
+        .nav { background: #f0f0f0; display: flex; flex-wrap: wrap; justify-content: center; padding: 10px; gap: 5px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+        .nav a { text-decoration: none; color: var(--dark); background: white; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; border: 1px solid #ddd; }
+        .system-block { padding: 20px; border-bottom: 8px solid var(--light); }
+        .system-title { color: var(--primary); font-size: 18px; font-weight: 900; text-transform: uppercase; border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 15px; }
+        .tables-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+        .table-container { flex: 1; min-width: 300px; }
+        .table-label { background: var(--dark); color: white; font-size: 11px; padding: 4px 10px; text-transform: uppercase; border-radius: 3px 3px 0 0; }
+        table { width: 100%; border-collapse: collapse; background: white; border: 1px solid var(--border); font-size: 13px; }
+        th { background: #f4f4f4; text-align: left; padding: 8px; font-size: 11px; }
+        td { padding: 8px; border-bottom: 1px solid #f0f0f0; }
+        td:last-child { text-align: right; font-weight: bold; color: var(--dark); background: #fffdfb; }
+        .star { color: var(--primary); font-weight: bold; }
+        .legend { background: var(--light); padding: 20px; font-size: 12px; border-top: 2px solid var(--primary); }
+        .info-box { background: #fff; border: 1px solid #ddd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+        .footer { background: var(--dark); color: white; text-align: center; padding: 30px 20px; font-size: 12px; }
+        @media (max-width: 650px) { .table-container { flex: 100%; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header><h1>INSTRUKCJA SZABLONU 3DEK.PL</h1></header>
+    <nav class="nav">
+        <a href="#antaro">ANTARO</a><a href="#legrabox">LEGRABOX</a><a href="#merivobox">MERIVOBOX</a>
+        <a href="#axis">AXIS PRO</a><a href="#modern">MODERN BOX</a><a href="#matrix">MATRIX SLIM</a>
+    </nav>
+
+    <!-- BLUM ANTARO -->
+    <section class="system-block" id="antaro">
+        <div class="system-title">BLUM ANTARO</div>
+        <div class="tables-wrapper">
+            <div class="table-container">
+                <div class="table-label">Prowadnice (30KG / 65KG)</div>
+                <table>
+                    <tr><th>Długość (30KG)</th><th>Otwory</th></tr>
+                    <tr><td>270</td><td>1, 4</td></tr>
+                    <tr><td>300 / 350</td><td>1, 4, 5</td></tr>
+                    <tr><td>400</td><td>1, 5, 7</td></tr>
+                    <tr><td>450</td><td>1, 5, 8</td></tr>
+                    <tr><td>500 / 550 / 600</td><td>1, 4, 8</td></tr>
+                    <tr style="border-top: 2px solid #ddd;"><th>Długość (65KG)</th><th>Otwory</th></tr>
+                    <tr><td>450</td><td>1, 4, 5, 8</td></tr>
+                    <tr><td>500 - 650</td><td>1, 4, 8</td></tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <div class="table-label">Fronty Szuflad</div>
+                <table>
+                    <tr><td>Wysokość M</td><td>1, 2</td></tr>
+                    <tr><td>Wysokość K</td><td>1, 2, 3</td></tr>
+                    <tr><td>RELING C</td><td>1, 2, 5<span class="star">*</span></td></tr>
+                    <tr><td>RELING D</td><td>1, 2, 6<span class="star">*</span></td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLUM LEGRABOX -->
+    <section class="system-block" id="legrabox">
+        <div class="system-title">BLUM LEGRABOX</div>
+        <div class="tables-wrapper">
+            <div class="table-container">
+                <div class="table-label">Prowadnice</div>
+                <table>
+                    <tr><td>270</td><td>1, 2, 6</td></tr>
+                    <tr><td>300 / 350</td><td>1, 2, 7, 8</td></tr>
+                    <tr><td>400 - 600</td><td>1, 2, 8</td></tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <div class="table-label">Fronty (System Expando)</div>
+                <table>
+                    <tr><td>Wysokość M / K</td><td>1<span class="star">*</span>, 2<span class="star">*</span></td></tr>
+                    <tr><td>Wysokość C</td><td>1<span class="star">*</span>, 2<span class="star">*</span>, 4<span class="star">**</span>, 5<span class="star">*</span></td></tr>
+                    <tr><td>Wysokość F</td><td>1<span class="star">*</span>, 2<span class="star">*</span>, 4<span class="star">**</span>, 5<span class="star">*</span>, 6<span class="star">*</span></td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLUM MERIVOBOX -->
+    <section class="system-block" id="merivobox">
+        <div class="system-title">BLUM MERIVOBOX</div>
+        <div class="tables-wrapper">
+            <div class="table-container">
+                <div class="table-label">Prowadnice (40KG / 70KG)</div>
+                <table>
+                    <tr><th>Długość (40KG)</th><th>Otwory</th></tr>
+                    <tr><td>270 - 350</td><td>1, 2, 6, 7</td></tr>
+                    <tr><td>400 - 600</td><td>1, 2, 8</td></tr>
+                    <tr style="border-top: 2px solid #ddd;"><th>Długość (70KG)</th><th>Otwory</th></tr>
+                    <tr><td>450 - 600</td><td>1, 2, 8</td></tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <div class="table-label">Fronty Szuflad</div>
+                <table>
+                    <tr><td>Wysokość M / K</td><td>1, 2</td></tr>
+                    <tr><td>Wysokość E</td><td>1, 2, 6</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- GTV AXIS PRO -->
+    <section class="system-block" id="axis">
+        <div class="system-title">GTV AXIS PRO</div>
+        <div class="tables-wrapper">
+            <div class="table-container">
+                <div class="table-label">Prowadnice</div>
+                <table>
+                    <tr><td>250</td><td>1, 2, 4, 5</td></tr>
+                    <tr><td>300 / 350</td><td>1, 2, 5, 6</td></tr>
+                    <tr><td>400</td><td>1, 2, 7, 8</td></tr>
+                    <tr><td>450 - 600</td><td>1, 2, 8</td></tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <div class="table-label">Fronty Szuflad</div>
+                <table>
+                    <tr><td>86 / 120</td><td>1, 2</td></tr>
+                    <tr><td>168 / 200</td><td>1, 2, 4, 5</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- GTV MODERN BOX -->
+    <section class="system-block" id="modern">
+        <div class="system-title">GTV MODERN BOX / PRO</div>
+        <div class="tables-wrapper">
+            <div class="table-container">
+                <div class="table-label">Prowadnice</div>
+                <table>
+                    <tr><th>Długość MB</th><th>Otwory</th></tr>
+                    <tr><td>250</td><td>1, 4</td></tr>
+                    <tr><td>300 / 350</td><td>1, 5</td></tr>
+                    <tr><td>400</td><td>1, 7</td></tr>
+                    <tr><td>450 - 550</td><td>1, 8</td></tr>
+                    <tr style="border-top: 2px solid #ddd;"><th>Długość MB PRO</th><th>Otwory</th></tr>
+                    <tr><td>300 - 400</td><td>1, 7</td></tr>
+                    <tr><td>450 - 550</td><td>1, 8</td></tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <div class="table-label">Fronty Szuflad</div>
+                <table>
+                    <tr><th>Modern Box</th><th>Otwory</th></tr>
+                    <tr><td>NISKA</td><td>1, 2</td></tr>
+                    <tr><td>ŚREDNIA</td><td>1, 2, 4<span class="star">*</span></td></tr>
+                    <tr><td>WYSOKA</td><td>1, 2, 4<span class="star">*</span>, 6<span class="star">*</span></td></tr>
+                    <tr style="border-top: 2px solid #ddd;"><th>Modern Box Pro</th><th>Otwory</th></tr>
+                    <tr><td>84</td><td>1, 2</td></tr>
+                    <tr><td>135</td><td>1, 2, 4<span class="star">*</span></td></tr>
+                    <tr><td>167</td><td>1, 2, 5<span class="star">*</span></td></tr>
+                    <tr><td>199</td><td>1, 2, 6<span class="star">*</span></td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAFELE MATRIX SLIM -->
+    <section class="system-block" id="matrix">
+        <div class="system-title">HAFELE MATRIX SLIM</div>
+        <div class="tables-wrapper">
+            <div class="table-container">
+                <div class="table-label">Prowadnice</div>
+                <table>
+                    <tr><td>270 - 300</td><td>1, 2, 7, 8</td></tr>
+                    <tr><td>350 - 550</td><td>1, 2, 8</td></tr>
+                    <tr><td>450-550 (50KG)</td><td>1, 2, 8</td></tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <div class="table-label">Fronty Szuflad</div>
+                <table>
+                    <tr><td>64 / 84</td><td>1, 2</td></tr>
+                    <tr><td>135</td><td>1, 2, 4</td></tr>
+                    <tr><td>167</td><td>1, 2, 4, 5</td></tr>
+                    <tr><td>199</td><td>1, 2, 5, 6</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="legend">
+        <strong>Legenda techniczna:</strong>
+        • <span class="star">*</span> - <strong>Wiertło 10 mm:</strong> Otwory pod mufy lub system Expando.<br>
+        • <span class="star">**</span> - <strong>Otwory alternatywne:</strong> Dla pojedynczych mocowań Legrabox.<br>
+        <div class="info-box">
+            <strong>Ograniczniki dolne (0-3 mm):</strong><br>
+            Wybierz dołączony ogranicznik z oznaczeniem żądanej szczeliny. Pozwala on ustawić dystans pierwszego frontu od wieńca szafki.
+        </div>
+    </div>
+    <div class="footer"><strong>www.3dek.pl</strong></div>
+</div>
+</body>
+</html>
